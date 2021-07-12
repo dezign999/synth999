@@ -23,7 +23,10 @@ In order for the watchy to receive weather upates, you'll need an API Key from [
 #### City Name or Code
 Weather for your location is limited to one area and is defined by entering your city name where defined in the source code under `CITY`. If your city name is used in other states or provinces, you can also use your city code by looking up a city on openweathermap.org, it'll take you to a page like "https://openweathermap.org/city/4574324". Copy those numbers (ex 4574324) on the end and put them into `CITY_ID` between the quotes. You'll also have to define `COUNTRY` and `TEMP`. `TEMP` is used to determine if Imperial temperature is displayed.
 
-#### NTP Servers
-NTP syncs require that you define your timezone, `TIMEZONE_STRING` which can be found [using this resource link](https://github.com/nayarsystems/posix_tz_db/blob/master/zones.json). Use the example in the source to determine what is required. You can leave `NTP_SERVER_1` as-is, or specify NTP servers. 'NTP_SERVER_2' and 'NTP_SERVER_3' are US based and should be changed to a local server if outside of the US.
+#### NTP Syncing
+NTP syncs require that you define your timezone, `TIMEZONE_STRING` which can be found [using this resource link](https://github.com/nayarsystems/posix_tz_db/blob/master/zones.json). Use the example in the source to determine what is required. You can leave `NTP_SERVER_1` as-is, or specify NTP servers. `NTP_SERVER_2` and `NTP_SERVER_3` are US based and should be changed to a local server if outside of the US.
+
+NTP Syncs happen twice a day, once at Noon and once at Midnight. This can be changed by modifying `NTP_TIMER`.
 
 #### Pause Updates
+Weather 
